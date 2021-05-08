@@ -1,6 +1,7 @@
 ---
 permalink: /
 ---
+{% include header.html %}
 # **Documentation**
 > How this project works and how to maintain your own
 
