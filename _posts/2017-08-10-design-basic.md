@@ -6,8 +6,8 @@ date:   2017-08-10 18:00:00 +0400
 categories: basic
 ---
 
-{% assign size = page.path | size | minus: 9 %}
-{% capture imagePostPath %}/assets/images/{{  page.path | slice: 6, size }}/{% endcapture %}
+{% assign size = page.path | size | minus: 10 %}
+{% capture imagePostPath %}/assets/images/{{  page.path | slice: 7, size }}/{% endcapture %}
 {% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id  }}/{% endcapture %}
 
 
