@@ -7,7 +7,7 @@ categories: basic
 ---
 
 {% assign size = page.path | size | minus: 10 %}
-{% capture imagePostPath %}/assets/images/{{  page.path | slice: 7, size }}/{% endcapture %}
+{% capture imagePostPath %}/images/{{  page.path | slice: 7, size }}/{% endcapture %}
 {% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id  }}/{% endcapture %}
 
 
