@@ -6,8 +6,8 @@ date:   2017-08-10 18:00:00 +0400
 categories: basic
 ---
 
-{% capture imagePostPath %}/assets/images/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id }}{% endcapture %}
-{% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id  }}{% endcapture %}
+{% capture imagePostPath %}/assets/images/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id }}/{% endcapture %}
+{% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id  }}/{% endcapture %}
 
 Выполняя базовые принципы проектирования, дизайнеры взаимодействия и разработчики могут создавать системы, отвечающие ожиданиям человека. Такие системы люди будут считать естественными. Ниже представлен список принципов с характерными примерами.
 
@@ -46,7 +46,7 @@ categories: basic
 
 **Хорошо: загрузка поста в Facebook.** При открытии Facebook появляется загрузка поста в примерном будущем его виде. Ты уже можешь подсознательно подготовиться понять расположение элементов на странице и подготовиться к чтению. Похожий эффект создаётся в прогрессивном JPEG, когда сначала показывается размытая картинка, а затем постепенно увеличивается её качество.
 
-__ include {{ includePostPath }}/load-facebook.html __
+__ include {{ includePostPath }}load-facebook.html __
 
 **Вывод:** при загрузке сначала показывайте placeholder (образ) контента. В случае изображений подойдет JPEG с прогрессивной разверткой. Можно улучшить эффект, показав [маленькую размытую картинку](https://jmperezperez.com/medium-image-progressive-loading-placeholder/). А в первое мгновение – блок, закрашенный [ключевым цветом изображения](https://jmperezperez.com/medium-image-progressive-loading-placeholder/#Other-ways-of-improving-placeholders-Google-Images-Search). Для текста используйте placeholder, показывающий структуру сообщения, заменяя текст на серые полоски. Анимация поможет понять, что перед вами не окончательный контент. Для приложений не используйте экран загрузки для брендинга. Вместо него показывайте [элементы управления первого экрана](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/).
 
