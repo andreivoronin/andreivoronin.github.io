@@ -6,22 +6,10 @@ date:   2017-08-10 18:00:00 +0400
 categories: basic
 ---
 
-{% capture imagePostPath %}/assets/images/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id }}/{% endcapture %}
+{% assign size = page.path | size | minus: 9 %}
+{% capture imagePostPath %}/assets/images/{{  page.path | slice: 6, size }}/{% endcapture %}
 {% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id  }}/{% endcapture %}
 
-
-{{ page.path }}
-{{ page.path | slice: 0, -2 }}
-{{ page.path }}
-
-ooo
-{% assign size = page.path | size | minus: 9 %}
-
-
-
-{% assign imagePostPath2 = page.path | slice: 6, size %}
-
-{{ imagePostPath2 }}
 
 Выполняя базовые принципы проектирования, дизайнеры взаимодействия и разработчики могут создавать системы, отвечающие ожиданиям человека. Такие системы люди будут считать естественными. Ниже представлен список принципов с характерными примерами.
 
