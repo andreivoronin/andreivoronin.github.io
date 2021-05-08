@@ -9,6 +9,12 @@ categories: basic
 {% capture imagePostPath %}/assets/images/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | slugify }}/{% endcapture %}
 {% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | slugify }}{% endcapture %}
 
+
+{{ page.url }}
+{{ page.id }}
+{{ page.name }}
+{{ page.path }}
+
 Выполняя базовые принципы проектирования, дизайнеры взаимодействия и разработчики могут создавать системы, отвечающие ожиданиям человека. Такие системы люди будут считать естественными. Ниже представлен список принципов с характерными примерами.
 
 ## 1. Отзывчивость
