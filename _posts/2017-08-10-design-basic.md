@@ -9,9 +9,9 @@ categories: basic
 {% capture imagePostPath %}/assets/images/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id }}/{% endcapture %}
 {% capture includePostPath %}/posts_includes/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id  }}/{% endcapture %}
 
-{% assign size = sku | size | minus: 2 %}
+
 {{ page.path }}
-{{ page.path | slice: 0, size }}
+{{ page.path | slice: 0, 2 }}
 
 Выполняя базовые принципы проектирования, дизайнеры взаимодействия и разработчики могут создавать системы, отвечающие ожиданиям человека. Такие системы люди будут считать естественными. Ниже представлен список принципов с характерными примерами.
 
