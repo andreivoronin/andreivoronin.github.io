@@ -383,6 +383,10 @@ pre {
     text-decoration: none
 }
 
+.markdown-body time {
+    color: #6a737d;
+}
+
 .markdown-body .absent {
     color: #cb2431
 }
