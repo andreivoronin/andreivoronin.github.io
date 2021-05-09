@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="post">
+<section class="post">
     {% assign image_path = '/img' | append: page.id | append: '/-cover.jpg' %}
     {% for static_file in site.static_files %}
         {% if static_file.path == image_path %}    
@@ -22,6 +22,6 @@ layout: default
       {{ page.date | date: "%b %-d, %Y" }}
     </time>
 
-</div>
+</section>
 
 {% include about.html %}
