@@ -2,21 +2,26 @@
 layout: default
 ---
 
-{% assign image_path = '/img' | append: page.id | append: '/-cover.jpg' %}
-{% for static_file in site.static_files %}
-    {% if static_file.path == image_path %}    
-        <div>
-          <img src="{{ image_path }}" alt="{{ page.title | escape }}">
-        </div>
-    {% endif %}
-{% endfor %}
+<div class="post">
+    {% assign image_path = '/img' | append: page.id | append: '/-cover.jpg' %}
+    {% for static_file in site.static_files %}
+        {% if static_file.path == image_path %}    
+            <div>
+              <img src="{{ image_path }}" alt="{{ page.title | escape }}">
+            </div>
+        {% endif %}
+    {% endfor %}
 
-<h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
 
-{{ content }}
+    <div class="post__content">
+        {{ content }}
+    </div>
 
-<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-  {{ page.date | date: "%b %-d, %Y" }}
-</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: "%b %-d, %Y" }}
+    </time>
+
+</div>
 
 {% include about.html %}
