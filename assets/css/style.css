@@ -35,11 +35,11 @@ body {
     margin-bottom: 24px;
 }
 
-.hero__greeting {
+.hero__greeting.hero__greeting {
     margin-bottom: 8px;
 }
 
-.hero__title {
+.hero__title.hero__title {
     margin-top: 8px;
 }
 
