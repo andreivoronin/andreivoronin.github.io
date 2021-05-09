@@ -18,15 +18,13 @@ layout: default
         {{ content }}
     </div>
     
-    <div class="post__tags">
-        <ul>
-            {% for tag in page.tags %}
-                <li>
-                    <a href="/tags/#{{ tag }}">{{ tag }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <ul class="post__tags">
+        {% for tag in page.tags %}
+            <li class="post__tags-item">
+                <a href="/tags/#{{ tag }}" class="post__tags-link">{{ tag }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ page.date | date: "%b %-d, %Y" }}
