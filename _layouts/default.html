@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+    {% seo %}
     <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
     {% include styles.html %}
   </head>
   <body>
     <div class="container markdown-body">
       {% if site.title and site.title != page.title %}
-      <div><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></div>
+      <header>
+        <div><a href="{{ "/" | absolute_url }}" class="logo">{{ site.title }}</a></div>
+      <header>
       {% endif %}
 
       {{ content }}
