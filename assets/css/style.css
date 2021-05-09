@@ -48,6 +48,10 @@ body {
     border-radius: 50%;
 }
 
+.post {
+    margin-bottom: 96px;
+}
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display: block
 }
