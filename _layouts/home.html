@@ -19,14 +19,16 @@ layout: default
                 </div>
             {% endif %}
         {% endfor %}
-        <h2 class="home__posts-heading">
-          <a href="{{ post.url }}" class="home__posts-link">{{ post.title }}</a>
-        </h2>
-        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="home__posts-date">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </time>
-        <div class="home__posts-excerpt">
-          {{ post.excerpt }}
+        <div class="home__posts-description">
+          <h2 class="home__posts-heading">
+            <a href="{{ post.url }}" class="home__posts-link">{{ post.title }}</a>
+          </h2>
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="home__posts-date">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </time>
+          <div class="home__posts-excerpt">
+            {{ post.excerpt }}
+          </div>
         </div>
       </li>
     {% endfor %}
