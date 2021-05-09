@@ -17,6 +17,26 @@ body {
     margin-bottom: 32px;
 }
 
+.hero__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 600px) {
+    .hero__content {
+        flex-direction: row;
+    }
+}
+
+.hero__info {
+    flex: 2;
+}
+
+.hero__figure {
+    flex: 1;
+}
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display: block
 }
