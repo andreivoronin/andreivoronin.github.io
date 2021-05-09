@@ -2,9 +2,13 @@
 layout: default
 ---
 
-<div>
-  <img src="/img/{{ page.id }}/-cover.jpg" alt="{{ page.title | escape }}">
-</div>
+{% for static_file in site.static_files %}
+    {% if static_file.path == '/img/design-basic/-cover.jpg' %}
+        <div>
+          <img src="/img/{{ page.id }}/-cover.jpg" alt="{{ page.title | escape }}">
+        </div>
+    {% endif %}
+{% endfor %}
   
 <h1>{{ page.title }}</h1>
 
