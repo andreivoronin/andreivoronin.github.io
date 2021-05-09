@@ -29,6 +29,10 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ page.date | date: "%b %-d, %Y" }}
     </time>
+    
+    <div class="post__comment">
+        <a href="https://github.com/andreivoronin/andreivoronin.github.io/issues?q=%22{{ page.id }}%22" class="post__comment-btn">Show comments</a>
+    </div>
 
 </section>
 
