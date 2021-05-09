@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<h1>{{ page.title | escape }}</h1>
+<div>
+  <img src="/img/{{ page.id }}/-cover.jpg" alt="{{ page.title | escape }}">
+</div>
+  
+<h1>{{ page.title }}</h1>
 
 {{ content }}
 
