@@ -30,6 +30,7 @@ body {
 }
 
 .hero__figure {
+    display: flex;
     margin: 0;
 }
 
