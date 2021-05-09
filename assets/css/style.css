@@ -7,6 +7,16 @@ body {
     margin: 0
 }
 
+.container {
+    max-width: 1012px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display: block
 }
