@@ -11,6 +11,14 @@ layout: default
   <ul class="home__posts">
     {% for post in site.posts %}
       <li class="home__posts-item">
+        {% assign image_path = '/img' | append: post.id | append: '/-cover.jpg' %}
+        {% for static_file in site.static_files %}
+            {% if static_file.path == image_path %}    
+                <div class="home__posts-cover">
+                  <img src="{{ image_path }}" alt="{{ post.title | escape }}">
+                </div>
+            {% endif %}
+        {% endfor %}
         <h2 class="home__posts-heading">
           <a href="{{ post.url }}" class="home__posts-link">{{ post.title }}</a>
         </h2>
