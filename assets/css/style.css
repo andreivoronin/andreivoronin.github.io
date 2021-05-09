@@ -37,6 +37,16 @@ body {
     flex: 1;
 }
 
+.hero__photo {
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .hero__photo {
+        border-radius: 0;
+    }
+}
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display: block
 }
