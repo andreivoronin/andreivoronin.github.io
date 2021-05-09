@@ -23,12 +23,6 @@ body {
     gap: 20px
 }
 
-@media (min-width: 768px) {
-    .hero__content {
-        
-    }
-}
-
 .hero__figure {
     display: flex;
     margin: 0;
@@ -55,16 +49,12 @@ body {
     margin-bottom: 8px;
 }
 
-.hero__title.hero__title {
-    margin: 0;
-    padding: 0;
+.hero__title {
     font-size: 16px;
-    border: 0;
 }
 
 @media (min-width: 768px) {
     .hero__title.hero__title {
-        margin-top: 8px;
         padding-bottom: 0.3em;
         font-size: 2em;
     }
@@ -80,7 +70,7 @@ body {
     }
 }
 
-.hero__description.hero__description {
+.hero__description {
     margin: 0;
 }
 
@@ -93,15 +83,6 @@ body {
     .hero__photo {
         min-width: 120px;
     }
-}
-
-.home {
-    
-}
-
-
-.home__posts {
-    
 }
 
 .home__posts-item {
@@ -141,16 +122,8 @@ body {
     gap: 8px 24px;
 }
 
-.post__tags.post__tags {
-    padding: 0;
-}
-
 .post__tags-item {
     list-style: none;
-}
-
-.post__tags-item.post__tags-item {
-    margin: 0;
 }
 
 .post__tags-link {
