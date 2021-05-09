@@ -100,12 +100,19 @@ body {
 }
 
 
-.home__posts.home__posts {
-    padding: 0;
+.home__posts {
+    
 }
 
 .home__posts-item {
-    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.home__posts-cover {
+    display: flex;
+    align-items: center;
+    max-width: 120px;
 }
 
 .home__posts-heading {
