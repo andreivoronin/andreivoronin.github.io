@@ -17,6 +17,10 @@ body {
     margin-bottom: 32px;
 }
 
+.logo {
+    font-size: 16px;
+}
+
 .hero__content {
     display: flex;
     align-items: center;
