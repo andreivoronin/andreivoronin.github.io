@@ -30,6 +30,19 @@ body {
     }
 }
 
+.hero__info {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.hero__greeting {
+    margin-bottom: 8px;
+}
+
+.hero__title {
+    margin-top: 8px;
+}
+
 .hero__photo {
     min-width: 120px;
     border-radius: 50%;
