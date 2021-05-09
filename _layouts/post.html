@@ -2,10 +2,12 @@
 layout: default
 ---
 
+{% assign image_path = '/img/' | append: page.id | append: '/-cover.jpg' %}
 {% for static_file in site.static_files %}
-    {% if static_file.path == '/img/design-basic/-cover.jpg' %}
+    {{ image_path }}
+    {% if static_file.path === image_path %}    
         <div>
-          <img src="/img/{{ page.id }}/-cover.jpg" alt="{{ page.title | escape }}">
+          <img src="{{ image_path }}" alt="{{ page.title | escape }}">
         </div>
     {% endif %}
 {% endfor %}
