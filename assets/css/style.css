@@ -48,6 +48,35 @@ body {
     border-radius: 50%;
 }
 
+.home {
+    
+}
+
+
+.home__posts.home__posts {
+    padding: 0;
+}
+
+.home__posts-item {
+    list-style: none;
+}
+
+.home__posts-heading {
+    
+}
+
+.home__posts-link {
+    
+}
+
+.home__posts-date {
+    
+}
+
+.home__posts-excerpt {
+    
+}
+
 .post {
     margin-bottom: 96px;
 }
