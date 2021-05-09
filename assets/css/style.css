@@ -52,6 +52,30 @@ body {
     margin-bottom: 96px;
 }
 
+.post__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+}
+
+.post__tags.post__tags {
+    padding: 0;
+}
+
+.post__tags-item {
+    list-style: none;
+}
+
+.post__tags-item.post__tags-item {
+    margin: 0;
+}
+
+.post__tags-link {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+}
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display: block
 }
