@@ -20,19 +20,34 @@ body {
 .hero__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column-reverse;
+    gap: 20px
 }
 
 @media (min-width: 768px) {
     .hero__content {
-        flex-direction: row;
+        
     }
 }
 
-.hero__info {
-    margin-top: 24px;
-    margin-bottom: 24px;
+.hero__figure {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .hero__info {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.hero__greeting {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hero__greeting {
+        display: block;
+    }
 }
 
 .hero__greeting.hero__greeting {
@@ -41,11 +56,38 @@ body {
 
 .hero__title.hero__title {
     margin-top: 8px;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .hero__title.hero__title {
+        font-size: 2em;
+    }
+}
+
+.hero__description {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hero__description {
+        display: block;
+    }
+}
+
+.hero__description.hero__description {
+    margin: 0;
 }
 
 .hero__photo {
-    min-width: 120px;
+    min-width: 60px;
     border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .hero__photo {
+        min-width: 120px;
+    }
 }
 
 .home {
