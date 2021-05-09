@@ -5,3 +5,8 @@ layout: default
 <h1>{{ page.title | escape }}</h1>
 
 {{ content }}
+
+<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+  {{ page.date | date: "%b %-d, %Y" }}
+  {{ page.date}}
+</time>
