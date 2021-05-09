@@ -4,16 +4,24 @@ layout: default
 
 {% include about.html %}
 
-{{ content }}
+<section class="home">
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ post.date | date: "%b %-d, %Y" }}
-      </time>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+  {{ content }}
+
+  <ul class="home__posts">
+    {% for post in site.posts %}
+      <li class="home__posts-item">
+        <h2 class="home__posts-heading">
+          <a href="{{ post.url }}" class="home__posts-link">{{ post.title }}</a>
+        </h2>
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="home__posts-date">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+        <div class="home__posts-excerpt">
+          {{ post.excerpt }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+</section>
