@@ -8,9 +8,9 @@ layout: default
 
   {{ content }}
 
-  <ul class="home__posts">
+  <div class="home__posts">
     {% for post in site.posts %}
-      <li class="home__posts-item">
+      <article class="home__posts-item">
         {% assign image_path = '/img' | append: post.id | append: '/-cover.jpg' %}
         {% for static_file in site.static_files %}
             {% if static_file.path == image_path %}    
@@ -30,8 +30,8 @@ layout: default
             {{ post.excerpt }}
           </div>
         </div>
-      </li>
+      </article>
     {% endfor %}
-  </ul>
+  </div>
 
 </section>
