@@ -20,6 +20,7 @@ body {
 .hero__content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column-reverse;
 }
 
@@ -29,15 +30,8 @@ body {
     }
 }
 
-.hero__info {
-    flex: 4;
-}
-
-.hero__figure {
-    flex: 1;
-}
-
 .hero__photo {
+    min-width: 120px;
     border-radius: 50%;
 }
 
