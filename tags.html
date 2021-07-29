@@ -1,0 +1,34 @@
+---
+layout: page
+title: Tags
+permalink: tags
+---
+
+<div class="container-md p-3">
+  <h1 class="h1">Tags of {{ site.title }}</h1>
+
+  {% for tag in site.tags %}
+    <div id="{{ tag[0] | escape }}" class="my-6 f4">
+      <h3>{{ tag[0] }}</h3>
+      <ul class="list-style-none">
+        {% for post in tag[1] %}
+          <li>
+            <h2 class="h4 text-normal">
+              <a href="{{ post.url }}"
+                tabindex="-1"
+                class="d-inline-block mr-2 py-1 link-gray-dark"
+                title="{{ post.subtitle }}"
+              >{{ post.title }}</a><time
+                datetime="{{ post.date | date_to_xmlschema }}"
+                itemprop="datePublished"
+                title="{{ post.date | date_to_long_string }}"
+                class="text-small text-gray"
+              >{{ post.date | date: "%-m/%-d" }}
+              </time>
+            </h2>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

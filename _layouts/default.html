@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "ru" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    {% assign image_path = '/img' | append: page.id | append: '/-cover.jpg' %}
+    {% for static_file in site.static_files %}
+      {% if static_file.path == image_path %}    
+        <meta property="og:image" content="{{ image_path }}" />
+      {% endif %}
+    {% endfor %}
+
+    {% if page.id %}
+{% seo %}
+    {% else %}
+<title>{{ site.title }}</title>
+{% seo title=false %}
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+      .markdown-body img,
+      .markdown-body video,
+      .markdown-body iframe {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+
+      .markdown-body img,
+      .markdown-body video {
+        height: auto;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body img,
+        .markdown-body video,
+        .markdown-body iframe {
+          margin-left: -16px;
+          margin-right: -16px;
+          max-width: calc(100% + 16px * 2);
+        }
+      }
+      article > a {
+        height: {{ site.image.height }}px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container-md d-flex flex-justify-between f4">
+      <div class="d-flex">
+        <a href="{{ '/' | absolute_url }}" class="p-3">
+          {{ site.title }}
+        </a>
+        <a href="{{ site.about.page }}" class="p-3">
+          About
+        </a>
+      </div>
+  
+      {% if site.twitter %}
+        <a href="https://twitter.com/intent/follow?screen_name={{ site.twitter.username }}"
+          class="p-3"
+          target="_blank"
+          title="Follow @{{ site.twitter.username }}"
+        >
+          Twitter&nbsp;<small class="text-small">↗</small>
+        </a>
+      {% endif %}
+  
+    </header>
+    
+    {{ content }}
+
+  </body>
+</html>

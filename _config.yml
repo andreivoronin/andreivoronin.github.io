@@ -1,0 +1,43 @@
+exclude:
+  - node_modules
+  - script
+
+sass:
+  style: :compressed
+
+theme: jekyll-theme-primer
+
+github: [metadata]
+  
+title: Andrei Voronin Blog
+description: Andrei Voronin Blog
+
+name: Andrei Voronin
+
+author: UlyanovskUI
+
+image:
+  width: 119
+  height: 68
+
+social:
+  name: Andrei Voronin
+  links:
+    - https://twitter.com/UlyanovskUI
+    - https://github.com/andreivoronin
+
+about:
+  line_1: I’m Andrei,
+  line_2: a frontend architect.
+  line_3: Here I write about programming and UX/UI design.
+  line_4: You will find up-to-date information on my twitter.
+  page: https://andreivoronin.github.io/about
+
+repository:
+  username: andreivoronin
+  comments: comments
+
+twitter:
+  username: UlyanovskUI
+  followers: 0.6K
+
